@@ -1,29 +1,31 @@
 #!/usr/bin/python3
-class Square():
-    def __init__(self, size=0):
-        self.__size = size
+class Square:
+    """Basic square class #5"""
 
-    def area(self):
-        return self.__size ** 2
+    def __init__(self, size=0):
+        """Initialize the square"""
+        self.size = size
 
     @property
     def size(self):
+        """Size Getter"""
         return self.__size
 
     @size.setter
-    def size(self, size_s):
-        if type(size_s) != int:
-            raise TypeError("size must be an integer")
-        if size_s < 0:
-            raise ValueError("size must be >= 0")
-        self.__size = size_s
+    def size(self, value):
+        """Size Setter"""
+        if type(value) is not int:
+            raise TypeError('size must be an integer')
+        elif value < 0:
+            raise ValueError('size must be >= 0')
+        else:
+            self.__size = value
+
+    def area(self):
+        """Calculates the area"""
+        return self.__size ** 2
 
     def my_print(self):
-        size = self.__size
-        if size == 0:
-            print("")
-            return
-        for i in range(size):
-            for j in range(size):
-                print("#", end="")
-            print("")
+        """Prints to stdout the square using # symbol"""
+        row = ''.join('#' for c in range(self.size))
+        print('\n'.join(row for r in range(self.size)))
