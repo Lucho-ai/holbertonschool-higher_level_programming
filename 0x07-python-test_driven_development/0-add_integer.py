@@ -1,22 +1,24 @@
 #!/usr/bin/python3
-"""
-To add to number
-(a) - (b) must be and integer or float type
-return the sum of a + b
+"""Task 0 - add integer
+This is our function to be tested
 """
 
 
 def add_integer(a, b=98):
-    """Programt to add to number
-    (a) + (b) must be and integer or float type
-    return the sum of a + b"""
-
-    if type(a) is float or type(a) is int:
-        a = int(a)
-    else:
+    """Add two integers together
+    Args:
+        a (int or float): First param
+        b (int or float): Second param; default 98
+    Returns:
+        Returns the integer sum of a and b
+    Raises:
+        TypeError: if either a or b is neither an integer nor a float
+    """
+    if a != a or not isinstance(a, (int, float)):
         raise TypeError('a must be an integer')
-    if type(b) is float or type(b) is int:
-        b = int(b)
-    else:
+    if b != b or not isinstance(b, (int, float)):
         raise TypeError('b must be an integer')
-    return a + b
+    res = a + b
+    if abs(res) == float('inf'):
+        raise OverflowError('overflow error')
+    return int(a) + int(b)
