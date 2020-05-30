@@ -1,36 +1,45 @@
 #!/usr/bin/python3
-"""
-Programt to div a matrix
-the elements should be a matrix
-return the div of the elementes of matrix
+"""Task 1 - matrix divide
+This is our function to be tested
 """
 
 
 def matrix_divided(matrix, div):
-    """Programt to div a matrix
-    the elements should be a matrix
-    return the div of the elementes of matrix"""
-
-    m = []
-    if len(matrix) == 0:
-        raise TypeError("matrix must be a matrix (list of lists) "
-                        "of integers/floats")
-    for i in matrix:
-        if len(i) == 0:
-            raise TypeError("matrix must be a matrix (list of lists) "
-                            "of integers/floats")
+    """Divides a list of integers or floats
+    Args:
+        matrix (list): a list of integers or floats
+        div (int or div): second parameter
+    Returns:
+        Returns a new matrix
+    Raises:
+        TypeError: if the mattric or div is of the incorrect type
+        ZeroDivisionError: if div is 0
+    """
+    te1 = "matrix must be a matrix (list of lists) of integers/floats"
+    te2 = "Each row of the matrix must have the same size"
+    te3 = "div must be a number"
+    zde = "division by zero"
+    if type(matrix) is not list or not len(matrix):
+        raise TypeError(te1)
+    rowsizecheck = 0
+    for row in matrix:
+        if type(row) is not list or not len(row):
+            raise TypeError(te1)
+        if rowsizecheck:
+            if len(row) != rowsize:
+                raise TypeError(te2)
         else:
-            m.append(len(i))
-        for x in i:
-            if type(x) is not float and type(x) is not int:
-                raise TypeError("matrix must be a matrix (list of lists) "
-                                "of integers/floats")
-    if len(set(m)) != 1:
-        raise TypeError('Each row of the matrix must have the same size')
-    if type(div) is float or type(div) is int:
-        pass
-    else:
-        raise TypeError('div must be a number')
+            rowsizecheck = 1
+            rowsize = len(row)
+        for e in row:
+            if type(e) not in [int, float]:
+                raise TypeError(te1)
+    if type(div) not in [int, float]:
+        raise TypeError(te3)
     if div == 0:
-        raise ZeroDivisionError('division by zero')
-    return [[round(x/div, 2) for x in j] for j in matrix]
+        raise ZeroDivisionError(zde)
+    new = []
+    for row in matrix:
+        newrow = list(map(lambda x: round(x / div, 2), [e for e in row]))
+        new.append(newrow.copy())
+    return new
