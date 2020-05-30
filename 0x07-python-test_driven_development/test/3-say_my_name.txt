@@ -1,29 +1,50 @@
->>> say_my_name = __import__('3-say_my_name').say_my_name
+The ``3-say_my_name`` module
+======================
 
->>> say_my_name(2, "Test")
-Traceback (most recent call last):
-TypeError: first_name must be a string
+Using ``3-say_my_name``
+-------------------
 
->>> say_my_name("Collie", ["Test", "Test"])
-Traceback (most recent call last):
-TypeError: last_name must be a string
+Test 1:
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
 
->>> say_my_name({"Tunes", "Test"}, 3.3)
-Traceback (most recent call last):
-TypeError: first_name must be a string
+Test 2:
+    >>> try:
+    ...     say_my_name(123)
+    ... except Exception as e:
+    ...     print(e)
+    first_name must be a string
 
->>> say_my_name()
-Traceback (most recent call last):
-TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+Test 3:
+    >>> try:
+    ...     say_my_name("Mon Chou", 123)
+    ... except Exception as e:
+    ...     print(e)
+    last_name must be a string
 
->>> str = {3:'hi', 9:'Time for dancing-party-time!'}
->>> say_my_name(str.get(9))
-My name is Time for dancing-party-time! 
+Test 4:
+    >>> try:
+    ...     say_my_name("Mon", "Chou")
+    ... except Exception as e:
+    ...     print(e)
+    My name is Mon Chou
 
->>> say_my_name(str.get(9), str.get(2))
-Traceback (most recent call last):
-TypeError: last_name must be a string
+Test 5:
+    >>> try:
+    ...     say_my_name(("set"),)
+    ... except Exception as e:
+    ...     print(e)
+    My name is set 
 
->>> say_my_name(None)
-Traceback (most recent call last):
-TypeError: first_name must be a string
+Test 6:
+    >>> try:
+    ...     say_my_name("[list]","[type]")
+    ... except Exception as e:
+    ...     print(e)
+    My name is [list] [type]
+
+Test 7:
+    >>> try:
+    ...	    say_my_name()
+    ... except Exception as e:
+    ...     print(e)
+    say_my_name() missing 1 required positional argument: 'first_name'
