@@ -1,32 +1,57 @@
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
->>> text_indentation("""This is a test. lucho? ez stuf: fun stuff.""")
-This is a test.
+Test 1:
+>>> text_indentation("")
+
+Test 2:
+>>> text_indentation("A")
+A
+
+Test 3:
+>>> text_indentation("?")
+?
 <BLANKLINE>
-lucho?
+
+Test 4:
+>>> text_indentation(" : ")
+:
 <BLANKLINE>
-ez stuf:
+
+Test 5:
+>>> text_indentation(" \n.\n ")
 <BLANKLINE>
-fun stuff.
+.
+<BLANKLINE>
 <BLANKLINE>
 
->>> text_indentation(96)
-Traceback (most recent call last):
-TypeError: text must be a string
+Test 6:
+>>> text_indentation(" \n.")
+<BLANKLINE>
+.
+<BLANKLINE>
 
->>> text_indentation(("txt", "txt"))
-Traceback (most recent call last):
-TypeError: text must be a string
+Test 7:
+>>> text_indentation(" A . ")
+A .
+<BLANKLINE>
 
->>> n = [5, 7, 77]
->>> text_indentation(n)
-Traceback (most recent call last):
-TypeError: text must be a string
+Test 8:
+>>> text_indentation(".\n ")
+.
+<BLANKLINE>
+<BLANKLINE>
 
->>> text_indentation(("", ""))
-Traceback (most recent call last):
-TypeError: text must be a string
+Test 9:
+>>> text_indentation("\n ")
+<BLANKLINE>
 
->>> text_indentation(None)
+Test 10:
+>>> text_indentation("abc\n mno   ")
+abc
+mno
+
+Test 11:
+>>> text_indentation(123)
 Traceback (most recent call last):
+...
 TypeError: text must be a string
