@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""6-base_geometry module"""
+"""6-base_geometry MOD"""
 
 
 class BaseGeometry(object):
