@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""2-is_same_class module"""
+"""2-is_same_class MOD"""
 
 
 def is_same_class(obj, a_class):
