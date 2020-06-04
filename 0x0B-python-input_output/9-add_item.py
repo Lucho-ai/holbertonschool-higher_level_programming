@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-"""9_add_item"""
 
 if __name__ == "__main__":
     import sys
