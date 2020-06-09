@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""4_append_write"""
+
+
 def append_write(filename="", text=""):
-    with open(filename, 'a+') as s:
-        return s.write(text)
+    """append_write function"""
+    with open(filename, "a") as f:
+        return f.write(text)
