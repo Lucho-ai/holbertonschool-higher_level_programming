@@ -1,1 +1,0 @@
-This is higher_level_programming projects
