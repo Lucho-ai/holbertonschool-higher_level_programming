@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 class Square():
-    """A square class."""
+    """Square class."""
 
     def __init__(self):
-        """Initialize class."""
+        """Begin class."""
         pass
