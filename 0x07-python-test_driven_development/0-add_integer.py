@@ -1,22 +1,18 @@
 #!/usr/bin/python3
+
 """
-Programt to add to number
-(a) - (b) must be and integer or float type
-return the sum of a + b
+This module contains the following functions:
+    - add_integer
+
 """
 
 
 def add_integer(a, b=98):
-    """Programt to add to number
-    (a) + (b) must be and integer or float type
-    return the sum of a + b"""
-
-    if type(a) is float or type(a) is int:
-        a = int(a)
-    else:
+    """
+    Return sum of a and b.
+    """
+    if not isinstance(a, (int, float)):
         raise TypeError('a must be an integer')
-    if type(b) is float or type(b) is int:
-        b = int(b)
-    else:
+    if not isinstance(b, (int, float)):
         raise TypeError('b must be an integer')
-    return a + b
+    return int(a) + int(b)
