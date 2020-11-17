@@ -1,6 +1,0 @@
--- MySQL Script.
-<<<<<<< HEAD
-CREATE DATABASE IF NOT EXISTS hbtn_0c_0;
-=======
-CREATE DATABASE IF NOT EXISTS hbtn_0c_0;
->>>>>>> 2d7e7af78f9a2f9cd0a0484fddf54a09c258751e
