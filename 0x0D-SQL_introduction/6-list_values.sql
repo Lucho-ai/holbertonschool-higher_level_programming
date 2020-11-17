@@ -1,3 +1,2 @@
--- show first_table
--- show first_table
+-- MySQL Script.
 SELECT * FROM first_table;

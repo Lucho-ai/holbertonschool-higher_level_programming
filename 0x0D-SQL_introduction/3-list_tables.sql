@@ -1,3 +1,2 @@
--- show tables
--- show tables
-SHOW tables;
+-- MySQL Script.
+SHOW TABLES;

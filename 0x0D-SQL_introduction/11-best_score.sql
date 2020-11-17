@@ -1,3 +1,2 @@
--- select where and order
--- select where and order
-SELECT score, name FROM second_table WHERE score >= 10 ORDER BY score DESC;
+-- MySQL Script.
+SELECT `score`, `name` FROM second_table WHERE score >= 10 ORDER BY score DESC;

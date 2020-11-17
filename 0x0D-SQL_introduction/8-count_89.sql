@@ -1,3 +1,2 @@
--- count where
--- count where
-SELECT COUNT(*) FROM first_table WHERE id = 89;
+-- MySQL Script.
+SELECT COUNT(id) FROM first_table WHERE id = "89";

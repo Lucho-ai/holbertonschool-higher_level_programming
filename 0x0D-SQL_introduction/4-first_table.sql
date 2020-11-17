@@ -1,3 +1,2 @@
--- creates table
--- creates table
-CREATE TABLE IF NOT EXISTS first_table(id INT, name VARCHAR(256));
+-- MySQL Script.
+CREATE TABLE IF NOT EXISTS first_table (id INT, name VARCHAR(256));

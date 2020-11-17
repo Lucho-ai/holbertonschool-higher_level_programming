@@ -1,3 +1,2 @@
--- show create table
--- show create table
+-- MySQL Script.
 SHOW CREATE TABLE first_table;

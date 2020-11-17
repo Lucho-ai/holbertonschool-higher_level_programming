@@ -1,3 +1,2 @@
--- delete where
--- delete where
+-- MySQL Script.
 DELETE FROM second_table WHERE score <= 5;
