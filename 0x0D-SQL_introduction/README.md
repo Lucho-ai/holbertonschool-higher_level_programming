@@ -1,1 +1,1 @@
-This is a MySQL project
+holbertonschool-higher_level_programming
